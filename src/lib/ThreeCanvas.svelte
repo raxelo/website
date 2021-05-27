@@ -10,14 +10,16 @@
 	export { clazz as class };
 
 	onMount(async () => {
-		const { Stage } = await import('./three/Stage');
+		const lazyStage = () => import('./three/Stage');
 
-		stage = await new Stage(canvas);
-		stage.start();
+		lazyStage().then(async ({ Stage }) => {
+			stage = await new Stage(canvas);
+			stage.start();
 
-		resizeListener = () => stage.updateSize();
+			resizeListener = () => stage.updateSize();
 
-		window.addEventListener('resize', resizeListener);
+			window.addEventListener('resize', resizeListener);
+		});
 	});
 
 	export function getStage() {
