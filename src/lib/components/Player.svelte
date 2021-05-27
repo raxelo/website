@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { AudioProvider } from '$lib/AudioProvider';
+
 	import { fly } from 'svelte/transition';
 
 	let audio: HTMLAudioElement = null;
@@ -7,7 +9,7 @@
 	let audioName: string;
 	let playing: boolean;
 
-	const audioMap = new Map<string, HTMLAudioElement>();
+	const audioProvider = AudioProvider.getInstance();
 
 	export async function playSound(name: string, volume: number) {
 		if (loading) return;
@@ -16,13 +18,7 @@
 			await audio.pause();
 		}
 
-		if (audioMap.has(name)) {
-			audio = audioMap.get(name);
-		} else {
-			audio = new Audio(name);
-			await audio.load();
-			audioMap.set(name, audio);
-		}
+		audio = await audioProvider.getAudio(name);
 
 		audio.onended = () => (playing = false);
 		audioName = name;
