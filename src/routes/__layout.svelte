@@ -71,7 +71,7 @@
 	<div
 		class="container mx-auto w-full px-2 flex flex-row flex-wrap md:flex-nowrap flex-grow md:pb-24 relative"
 	>
-		<div class="w-full md:w-1/2">
+		<div class="w-full md:w-1/2 relative z-50">
 			<slot />
 		</div>
 		<div
