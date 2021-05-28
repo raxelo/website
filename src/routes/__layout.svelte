@@ -24,7 +24,7 @@
 	function hoverOnLink(link) {
 		musicPlayer.playSound('select.mp3', 0.25);
 		const linkBackground = linkBackgrounds[link.url];
-		threeCanvas.getStage().getElementManager().setShownType(linkBackground);
+		threeCanvas?.getStage()?.getElementManager().setShownType(linkBackground);
 	}
 
 	export let path;
