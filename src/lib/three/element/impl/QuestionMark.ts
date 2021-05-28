@@ -9,8 +9,6 @@ import { WaveUtils } from '../../util/WaveUtils';
 import { ElementWrapper } from '../ElementWrapper';
 
 export class QuestionMark extends ElementWrapper {
-	material: MeshBasicMaterial;
-
 	async buildElement(): Promise<GLTF> {
 		const loader = new (await GLTFLoader).GLTFLoader();
 
@@ -29,7 +27,7 @@ export class QuestionMark extends ElementWrapper {
 		this.buildElement().then((element) => {
 			this.element = element.scene;
 			this.element.rotation.x = Math.PI * 0.4;
-			this.element.scale.set(6, 6, 6);
+			this.element.scale.setScalar(7.5);
 			scene.add(this.element);
 		});
 	}
