@@ -14,7 +14,6 @@ export class Stage {
 	private camera: PerspectiveCamera;
 	private renderer: WebGLRenderer;
 	private clock: Clock;
-	private cameraFactor: number;
 
 	private elementManager: ElementManager;
 
@@ -23,7 +22,6 @@ export class Stage {
 		this.renderer = new WebGLRenderer({
 			canvas
 		});
-		this.cameraFactor = 50;
 
 		this.camera = new PerspectiveCamera();
 		this.camera.zoom = 1.7;
@@ -61,7 +59,6 @@ export class Stage {
 		const width = canvas.clientWidth;
 		const height = canvas.clientHeight;
 		const camera = this.camera;
-		const cameraFactor = this.cameraFactor;
 
 		// adjust displayBuffer size to match
 		if (canvas.width === width && canvas.height === height) {
