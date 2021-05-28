@@ -20,7 +20,8 @@ export class Stage {
 	constructor(canvas: HTMLCanvasElement) {
 		// Initialize our properties
 		this.renderer = new WebGLRenderer({
-			canvas
+			canvas,
+			antialias: true
 		});
 
 		this.camera = new PerspectiveCamera(30);
@@ -64,7 +65,7 @@ export class Stage {
 			return;
 		}
 
-		this.renderer.setSize(width, height, false);
+		this.renderer.setSize(window.innerWidth, window.innerHeight, false);
 		camera.aspect = width / height;
 		camera.updateProjectionMatrix();
 
