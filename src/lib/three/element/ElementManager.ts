@@ -2,6 +2,7 @@ import type { Stage } from '../Stage';
 import type { ElementWrapper } from './ElementWrapper';
 import { GeometricShape } from './impl/GeometricShape';
 import { QuestionMark } from './impl/QuestionMark';
+import { Smartphone } from './impl/Smartphone';
 
 export class ElementManager {
 	private elements: Array<ElementWrapper>;
@@ -23,7 +24,8 @@ export class ElementManager {
 	buildElements(): Array<ElementWrapper> {
 		const geometricShape = new GeometricShape();
 		const questionMark = new QuestionMark();
-		return [geometricShape, questionMark];
+		const smartphone = new Smartphone();
+		return [geometricShape, questionMark, smartphone];
 	}
 
 	private addElementsToStage() {

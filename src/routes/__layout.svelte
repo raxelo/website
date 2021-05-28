@@ -36,12 +36,17 @@
 		{
 			label: 'projects',
 			url: '/projects'
+		},
+		{
+			label: 'contact',
+			url: '/contact'
 		}
 	];
 
 	const linkBackgrounds = {
 		'/projects': 'GeometricShape',
-		'/about-me': 'QuestionMark'
+		'/about-me': 'QuestionMark',
+		'/contact': 'Smartphone'
 	};
 
 	onMount(() => {
