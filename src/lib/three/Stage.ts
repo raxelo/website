@@ -1,14 +1,10 @@
 import {
 	AmbientLight,
 	Clock,
-	DirectionalLight,
-	OrthographicCamera,
 	PerspectiveCamera,
 	PointLight,
 	PointLightHelper,
 	Scene,
-	SpotLight,
-	Vector3,
 	WebGLRenderer
 } from 'three';
 import { ElementManager } from './element/ElementManager';
