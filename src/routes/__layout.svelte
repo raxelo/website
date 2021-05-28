@@ -69,9 +69,9 @@
 		</ul>
 	</nav>
 	<div
-		class="container mx-auto w-full px-2 flex flex-row flex-wrap md:flex-nowrap flex-grow md:pb-24 relative"
+		class="container mx-auto w-full flex flex-row flex-wrap md:flex-nowrap flex-grow md:pb-24 relative"
 	>
-		<div class="w-full md:w-1/2 relative z-50">
+		<div class="w-full md:w-1/2 relative z-50 pl-2">
 			<slot />
 		</div>
 		<div
