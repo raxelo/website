@@ -23,8 +23,7 @@ export class Stage {
 			canvas
 		});
 
-		this.camera = new PerspectiveCamera();
-		this.camera.zoom = 1.7;
+		this.camera = new PerspectiveCamera(30);
 
 		this.scene = new Scene();
 
