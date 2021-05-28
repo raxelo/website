@@ -1,4 +1,4 @@
-import type { Clock, MeshBasicMaterial, Scene } from 'three';
+import type { Clock, Scene } from 'three';
 
 // This is ugly.
 // eslint-disable-next-line @typescript-eslint/no-var-requires
