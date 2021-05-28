@@ -1,9 +1,21 @@
-import { Clock, OrthographicCamera, PointLight, Scene, WebGLRenderer } from 'three';
+import {
+	AmbientLight,
+	Clock,
+	DirectionalLight,
+	OrthographicCamera,
+	PerspectiveCamera,
+	PointLight,
+	PointLightHelper,
+	Scene,
+	SpotLight,
+	Vector3,
+	WebGLRenderer
+} from 'three';
 import { ElementManager } from './element/ElementManager';
 
 export class Stage {
 	private scene: Scene;
-	private camera: OrthographicCamera;
+	private camera: PerspectiveCamera;
 	private renderer: WebGLRenderer;
 	private clock: Clock;
 	private cameraFactor: number;
@@ -17,15 +29,21 @@ export class Stage {
 		});
 		this.cameraFactor = 50;
 
-		this.camera = new OrthographicCamera(0, 0, 0, 0, 1, 10000);
+		this.camera = new PerspectiveCamera();
+		this.camera.zoom = 1.7;
 
 		this.scene = new Scene();
 
-		const light = new PointLight(0xffffff, 2);
-		light.position.z = 10;
-		light.position.x = 10;
-		light.position.y = 10;
+		const light = new PointLight(0xcccccc, 1.4);
+		const pointLightHelper = new PointLightHelper(light);
+		this.scene.add(pointLightHelper);
+		light.position.z += 30;
+		light.position.y += 30;
 		this.scene.add(light);
+
+		const ambientLight = new AmbientLight(0xd9e7ff, 0.5);
+
+		this.scene.add(ambientLight);
 		this.clock = new Clock();
 
 		// Set up the renderer and camera
@@ -55,10 +73,7 @@ export class Stage {
 		}
 
 		this.renderer.setSize(width, height, false);
-		camera.left = -width / cameraFactor;
-		camera.right = width / cameraFactor;
-		camera.top = height / cameraFactor;
-		camera.bottom = -height / cameraFactor;
+		camera.aspect = width / height;
 		camera.updateProjectionMatrix();
 
 		this.renderer.setPixelRatio(window.devicePixelRatio);
