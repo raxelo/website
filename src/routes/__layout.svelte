@@ -80,17 +80,19 @@
 			<slot />
 		</div>
 		<div
-			class="w-full md:w-1/2 animate-fade-in md:fixed md:right-0 relative min-h-[650px] max-h-[100vh] flex md:flex-col flex-row overflow-x-hidden"
+			class="w-full md:w-1/2 h-[560px] animate-fade-in md:fixed md:right-0 relative md:h-full overflow-x-hidden"
 		>
-			<ThreeCanvas
-				bind:this={threeCanvas}
-				class="w-[300%] md:w-full h-full md:left-0 left-1/2 transform -translate-x-1/3 md:transform-none absolute flex-grow"
-			/>
-			<Link
-				to="https://github.com/pragmare"
-				class="relative text-sm md:text-lg text-center mt-auto md:mb-16 mb-auto md:pt-0 pt-24"
-				>visit this project on github</Link
-			>
+			<div class="h-full md:h-2/3 relative flex md:flex-col flex-row">
+				<ThreeCanvas
+					bind:this={threeCanvas}
+					class="w-[300%] md:w-full h-full md:left-0 left-1/2 transform -translate-x-1/3 md:transform-none absolute flex-grow"
+				/>
+				<Link
+					to="https://github.com/pragmare"
+					class="relative text-sm md:text-lg text-center mt-auto md:mb-0 mb-auto md:pt-0 pt-24"
+					>visit this project on github</Link
+				>
+			</div>
 		</div>
 	</div>
 	<Player bind:this={musicPlayer} />
