@@ -28,26 +28,9 @@
 	}
 
 	export let path;
-	const links = [
-		{
-			label: 'about me',
-			url: '/about-me'
-		},
-		{
-			label: 'projects',
-			url: '/projects'
-		},
-		{
-			label: 'contact',
-			url: '/contact'
-		}
-	];
+	const links = [];
 
-	const linkBackgrounds = {
-		'/projects': 'GeometricShape',
-		'/about-me': 'QuestionMark',
-		'/contact': 'Smartphone'
-	};
+	const linkBackgrounds = {};
 
 	onMount(() => {
 		console.log('hey 👀');

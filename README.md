@@ -5,8 +5,6 @@ This site is powered by [SvelteKit](https://kit.svelte.dev/) 🚀
 Currently using TailwindCSS, TypeScript, and three.js for the 3D magic.
 
 - [Site 🌐](https://lucas.am/)
-- [Blog ✍](https://lucas.am/blog)
-- [My projects 🔨](https://lucas.am/projects)
 
 ---
 
