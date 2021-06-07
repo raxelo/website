@@ -16,6 +16,7 @@
 	import Link from '../lib/components/Link.svelte';
 	import { onMount } from 'svelte';
 	import Player from '$lib/components/Player.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	let musicPlayer: Player;
 
@@ -43,7 +44,7 @@
 	});
 </script>
 
-<main class="relative text-gray-400 min-h-screen overflow-y-hidden flex flex-col">
+<main class="relative min-h-screen overflow-y-hidden flex flex-col">
 	<nav class="container mx-auto w-full px-2 flex mt-4 py-4 justify-between items-center">
 		<a class="text-lg font-bold text-white" href="/">Home</a>
 		<ul class="flex items-center">
@@ -80,3 +81,4 @@
 	</div>
 	<Player bind:this={musicPlayer} />
 </main>
+<Footer />
