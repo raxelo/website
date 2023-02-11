@@ -1,0 +1,9 @@
+@import '@fontsource/lekton';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Lekton', sans-serif;
+}
