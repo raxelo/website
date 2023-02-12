@@ -3,7 +3,6 @@
 </script>
 
 <svelte:head>
-  <title>Projects</title>
   <meta name="description" content="Some of my personal projects" />
 </svelte:head>
 
