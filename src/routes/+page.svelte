@@ -1,5 +1,6 @@
 <script>
 	import lucas from '$lib/images/lucas.webp';
+  import TechBadge from '../components/TechBadge.svelte';
 </script>
 
 <section class="flex gap-12 items-center justify-center flex-wrap border-dashed p-5 lg:p-12 rounded-lg border-gray-300 border-[4px] transition-all hover:scale-[1.03] duration-500">
@@ -20,32 +21,32 @@
 
   <div class="flex flex-col gap-12">
     <div>
-      <h3 class="text-xl font-bold mb-2">Frontend</h3>
+      <h3 class="text-xs font-bold mb-2 uppercase">frontend</h3>
       <div class="flex flex-wrap gap-4 justify-center">
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">Vue</span>
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">React</span>
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">Svelte</span>
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">Vite</span>
+        <TechBadge>vue</TechBadge>
+        <TechBadge>react</TechBadge>
+        <TechBadge>svelte</TechBadge>
+        <TechBadge>vite</TechBadge>
       </div>
     </div>
 
     <div>
-      <h3 class="text-xl font-bold mb-2">Backend</h3>
+      <h3 class="text-xs font-bold mb-2 uppercase">backend</h3>
       <div class="flex flex-wrap gap-4 justify-center">
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">Express</span>
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">Go</span>
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">MongoDB</span>
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">Redis</span>
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">Typeorm</span>
+        <TechBadge>express</TechBadge>
+        <TechBadge>mongodb</TechBadge>
+        <TechBadge>express</TechBadge>
+        <TechBadge>redis</TechBadge>
+        <TechBadge>typeorm</TechBadge>
       </div>
     </div>
 
     <div>
-      <h3 class="text-xl font-bold mb-2">DevOps</h3>
+      <h3 class="text-xs font-bold mb-2 uppercase">DevOps</h3>
       <div class="flex flex-wrap gap-4 justify-center">
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">Docker</span>
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">git</span>
-        <span class="bg-blue-100 text-blue-500 px-2 py-1 rounded-lg">Unix</span>
+        <TechBadge>docker</TechBadge>
+        <TechBadge>git</TechBadge>
+        <TechBadge>unix</TechBadge>
       </div>
     </div>
 
