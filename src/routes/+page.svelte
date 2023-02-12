@@ -33,7 +33,7 @@
     <div>
       <h3 class="text-xs font-bold mb-2 uppercase">backend</h3>
       <div class="flex flex-wrap gap-4 justify-center">
-        <TechBadge>express</TechBadge>
+        <TechBadge>node</TechBadge>
         <TechBadge>mongodb</TechBadge>
         <TechBadge>express</TechBadge>
         <TechBadge>redis</TechBadge>
