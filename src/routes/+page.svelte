@@ -1,10 +1,10 @@
 <script>
-	import lucas from '$lib/images/lucas.webp';
+  import LucasPicture from '../components/LucasPicture.svelte';
   import TechBadge from '../components/TechBadge.svelte';
 </script>
 
 <section class="flex gap-12 items-center justify-center flex-wrap border-dashed p-5 lg:p-12 rounded-lg border-gray-300 border-[4px] transition-all hover:scale-[1.03] duration-500">
-  <img class="w-40 h-40 block" src={lucas} alt="Lucas" />
+  <LucasPicture />
 
   <div class="max-w-lg flex flex-col gap-4 text-xl">
     <h3>
