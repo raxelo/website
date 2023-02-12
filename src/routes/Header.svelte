@@ -1,7 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import logo from "$lib/images/svelte-logo.svg";
-  import Lucas from "../components/Lucas.svelte";
+  import { randomEmoji } from '../components/useRandomEmoji';
 
   const links = [
     {
@@ -17,7 +16,10 @@
 
 <header>
   <nav class="flex flex-col gap-4 items-center my-8 justify-center">
-    <Lucas />
+    <h1 class="font-bold text-black text-lg">
+      Lucas Goyeche {$randomEmoji}
+    </h1>
+    
     <ul class="flex items-center gap-5">
       {#each links as link (link.href)}
         <li

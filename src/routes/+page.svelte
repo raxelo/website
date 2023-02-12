@@ -2,12 +2,6 @@
 	import lucas from '$lib/images/lucas.webp';
 </script>
 
-<svelte:head>
-	<title>Lucas Goyeche</title>
-	<meta name="description" content="Lucas Goyeche ; Software Developer and more!" />
-</svelte:head>
-
-
 <section class="flex gap-12 items-center justify-center flex-wrap border-dashed p-5 lg:p-12 rounded-lg border-gray-300 border-[4px] transition-all hover:scale-[1.03] duration-500">
   <img class="w-40 h-40 block" src={lucas} alt="Lucas" />
 

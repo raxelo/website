@@ -1,6 +1,7 @@
 <script>
   import Header from "./Header.svelte";
   import "./styles.css";
+  import { randomEmoji } from '../components/useRandomEmoji';
 
   import MdiTwitter from "~icons/mdi/twitter";
   import MdiGithub from "~icons/mdi/github";
@@ -34,6 +35,12 @@
     },
   ];
 </script>
+
+<svelte:head>
+	<title>Lucas Goyeche</title>
+	<meta name="description" content="Lucas Goyeche ; Software Developer and more!" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{$randomEmoji}</text></svg>">
+</svelte:head>
 
 <div class="max-w-4xl mx-auto px-4 min-h-screen flex flex-col">
   <Header />
