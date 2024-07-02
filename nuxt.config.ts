@@ -10,13 +10,6 @@ export default defineNuxtConfig({
         // <script src="https://myawesome-lib.js"></script>
         { src: "https://awesome-lib.js" },
       ],
-      link: [
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap",
-        },
-      ],
     },
   },
   modules: [
@@ -36,4 +29,3 @@ export default defineNuxtConfig({
     },
   },
 });
-
