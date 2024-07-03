@@ -10,18 +10,18 @@ defineProps<{
 <template>
   <NuxtLink :to="link">
     <div
-      class="border-2 bg-gray-300 bg-opacity-10 border-black p-1 group h-full grid grid-cols-1"
+      class="border-2 bg-gray-300 bg-opacity-10 border-black p-1 group h-full gap-2 grid-rows-[auto,3em,2fr,auto] justify-start items-start grid grid-cols-1"
     >
       <NuxtImg
         class="grayscale group-hover:grayscale-0 w-full rounded-none border-2 border-black h-32 object-cover object-top"
         :src="thumbnail"
         :alt="alt"
       />
-      <h2 class="text-xl font-bold">
+      <h2 class="px-1 text-lg leading-tight font-bold">
         {{ title }}
       </h2>
 
-      <div class="font-normal mb-4 h-full flex flex-col">
+      <div class="px-1 font-normal mb-4 h-full flex flex-col">
         <slot />
       </div>
 
@@ -37,4 +37,3 @@ defineProps<{
     </div>
   </NuxtLink>
 </template>
-

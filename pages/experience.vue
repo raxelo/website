@@ -9,12 +9,12 @@ const openBR = () => {
 </script>
 
 <template>
-  <h1 class="text-2xl font-bold">Portfolio</h1>
+  <h1 class="text-2xl font-bold">Experience</h1>
 
   <div class="grid grid-cols-2 gap-x-8 gap-y-6 auto-rows-fr">
     <Article
-      title="My Role at Broken Rubik"
-      thumbnail="/img/projects/brokenrubik.png"
+      title="Broken Rubik"
+      thumbnail="/img/projects/brokenrubik.svg"
       alt="Broken Rubik Logo"
       link="/portfolio"
     >
@@ -35,29 +35,7 @@ const openBR = () => {
     </Article>
 
     <Article
-      title="Broken Rubik Slideshows"
-      thumbnail="/img/projects/slides.png"
-      alt="SEO Monitoring in SuiteCommerce"
-      link="/portfolio"
-    >
-      <p>
-        A collection of slideshows I made for various presentations at
-        <span
-          class="font-bold text-blue-300 border-b border-blue-300"
-          @click="openBR"
-          >Broken Rubik</span
-        >.
-      </p>
-
-      <div class="mt-auto flex mb-1">
-        <IconList
-          :icons="['github', 'eslint', 'typescript', 'docker', 'netsuite']"
-        />
-      </div>
-    </Article>
-
-    <Article
-      title="ArcoSpace NetSuite Consulting"
+      title="ArcoSpace.io"
       thumbnail="/img/projects/arcospace.png"
       alt="ArcoSpace NetSuite Consulting"
       link="/portfolio"

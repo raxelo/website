@@ -33,10 +33,10 @@ useSeoMeta({
             <div class="bg-red-400">(about me)</div>
           </template>
         </Card>
-        <Card link="/portfolio">
+        <Card link="/experience">
           <template #card-header>
             <div>
-              <h2 class="text-2xl font-black">Portfolio</h2>
+              <h2 class="text-2xl font-black">Experience</h2>
               <img
                 alt="Minecraft Logo"
                 class="right-3 top-5 absolute w-12 h-12 object-fill"
