@@ -8,7 +8,6 @@ const { copy } = useClipboard();
 <template>
   <article>
     <h1 class="text-2xl font-bold">Get in touch</h1>
-    <p>Get a quote, hire me, or simply say hi! 🙂</p>
 
     <span
       popover
@@ -40,7 +39,7 @@ const { copy } = useClipboard();
           href="https://feed.odecloud.app/odeprofiles/22635906-4042-4fe8-b116-df21698ee807"
           target="_blank"
         >
-          Hola mundo
+          Lucas Goyeche
         </a>
       </div>
       <div class="flex flex-col justify-start items-start">
