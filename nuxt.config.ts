@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    "@nuxt/image",
     ["unplugin-icons/nuxt", { autoInstall: true }],
     "@nuxtjs/color-mode",
     "@nuxt/image",
@@ -29,3 +30,4 @@ export default defineNuxtConfig({
     },
   },
 });
+

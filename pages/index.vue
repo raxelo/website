@@ -9,9 +9,9 @@ const allLogos = technologyIcons;
   <article>
     <h1 class="text-2xl font-bold">Lucas Goyeche</h1>
     <div class="mb-4">
-      <img
+      <NuxtImg
         class="mb-4 mx-auto block sm:mb-0 sm:ml-2 sm:-mt-12 w-32 h-32 bg-black sm:float-right sm:inline rounded-full border-2 border-black shadow-[15px_0px_0_#000000]"
-        src="/assets/img/teamlab.jpg"
+        src="/img/teamlab.jpg"
         alt="me in teamlab planets, Tokyo"
       />
 
@@ -60,12 +60,13 @@ const allLogos = technologyIcons;
       free to <NuxtLink to="/contact">contact me</NuxtLink>.
     </p>
 
-    <hr />
+    <hr class="my-3" />
 
     <p class="leading-relaxed">
-      <img
+      <NuxtPicture
+        format="avif,webp"
         class="md:w-1/3 mr-2 md:float-left inline rounded-none"
-        src="/assets/img/aquarium.webp"
+        src="/img/aquarium.webp"
         alt="Kyoto Aquarium"
       />
 
