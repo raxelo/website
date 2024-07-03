@@ -63,9 +63,8 @@ const allLogos = technologyIcons;
     <hr class="my-3" />
 
     <p class="leading-relaxed">
-      <NuxtPicture
-        format="avif,webp"
-        class="md:w-1/3 mr-2 md:float-left inline rounded-none"
+      <NuxtImg
+        class="w-full sm:w-[240px] sm:h-[320px] mr-2 md:float-left inline rounded-none"
         src="/img/aquarium.webp"
         alt="Kyoto Aquarium"
       />
