@@ -337,8 +337,8 @@ const workspaces = ref([
         <div>
           <p>
             The function shows all of my <code>ghq</code> projects and uses
-            <a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener noreferrer">fzf</a>
-            the list, I get moved into a new (or existing) <code>tmux</code> session
+            <a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener noreferrer">fzf</a> to show a picker.
+            After choosing a value from the list, I get moved into a new (or existing) <code>tmux</code> session
             for that directory.
           </p>
 
