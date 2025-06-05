@@ -5,9 +5,16 @@ import { RouterLink, useRouter } from "vue-router";
 type AsyncImport = () => Promise<void>;
 
 const importMap = new Map<HTMLAnchorElement, AsyncImport>();
-const ric = window.requestIdleCallback || setTimeout; // Fallback for Safari
+var window
+const ric = window && window.requestIdleCallback || setTimeout; // Fallback for Safari
 const queue = ref<AsyncImport[]>([]);
 
+var IntersectionObserver
+if (!IntersectionObserver) {
+  IntersectionObserver = class {
+
+  }
+}
 const observer = new IntersectionObserver((entries) => {
   for (const entry of entries) {
     if (entry.isIntersecting) {

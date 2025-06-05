@@ -10,7 +10,8 @@ export const createApp = ViteSSG(
 	{ routes },
 	// function to have custom setups
 	({ app, router, routes, isClient, initialState }) => {
-		app.use(RouterPrefetch);
-		// install plugins etc.
+		if (isClient) {
+			app.use(RouterPrefetch);
+		}
 	},
 );
