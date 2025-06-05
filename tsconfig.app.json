@@ -15,7 +15,7 @@
 			"@/*": ["./src/*"]
 		},
 
-		"types": ["unplugin-icons/types/vue"]
+		"types": ["unplugin-icons/types/vue", "unplugin-vue-router/client"]
 	},
 	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

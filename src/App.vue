@@ -11,11 +11,10 @@ const links = [
 		text: "Work",
 		href: "/work",
 	},
-	// @TODO:
-	// {
-	// 	text: "Blog",
-	// 	href: "/blog",
-	// },
+	{
+		text: "Blog",
+		href: "/blog",
+	},
 ];
 
 const { currentRoute } = useRouter();

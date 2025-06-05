@@ -176,4 +176,85 @@
 		font-weight: 400;
 		font-style: normal;
 	}
+
+	.prose {
+		body {
+			@apply bg-background text-foreground;
+			font-family: "Geist", sans-serif;
+			font-optical-sizing: auto;
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		/* Headings */
+		h1 {
+			@apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+		}
+
+		h2 {
+			@apply mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
+		}
+
+		h3 {
+			@apply mt-8 scroll-m-20 text-2xl font-semibold tracking-tight;
+		}
+
+		h4 {
+			@apply mt-6 scroll-m-20 text-xl font-semibold tracking-tight;
+		}
+
+		/* Paragraphs & Links */
+		p {
+			@apply leading-7 [&:not(:first-child)]:mt-6;
+		}
+
+		/* Blockquotes */
+		blockquote {
+			@apply mt-6 border-l-2 pl-6 italic text-muted-foreground;
+		}
+
+		/* Lists */
+		ul,
+		ol {
+			@apply my-6 ml-6;
+		}
+
+		ul {
+			@apply list-disc;
+		}
+
+		ol {
+			@apply list-decimal;
+		}
+
+		li {
+			@apply mt-2;
+		}
+
+		/* Inline Code */
+		code {
+			@apply relative text-rose-400 rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+		}
+
+		/* Tables */
+		table {
+			@apply w-full caption-bottom text-sm;
+		}
+
+		thead tr {
+			@apply border-b;
+		}
+
+		tbody tr {
+			@apply m-0 border-b p-0 transition-colors even:bg-muted hover:bg-muted/50;
+		}
+
+		th {
+			@apply border-x px-4 py-2 text-left align-middle font-bold text-foreground [&[align=center]]:text-center [&[align=right]]:text-right;
+		}
+
+		td {
+			@apply border-x px-4 py-2 text-left align-middle [&[align=center]]:text-center [&[align=right]]:text-right;
+		}
+	}
 }
