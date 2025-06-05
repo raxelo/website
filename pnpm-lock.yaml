@@ -41,9 +41,6 @@ importers:
       vue:
         specifier: ^3.5.13
         version: 3.5.16(typescript@5.8.3)
-      vue-router-prefetch:
-        specifier: ^1.6.3
-        version: 1.6.3
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -3014,9 +3011,6 @@ packages:
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
-
-  vue-router-prefetch@1.6.3:
-    resolution: {integrity: sha512-DR+DJG6kPaaHU06Wxk37rU2WbCVejDLEssJtkBTF7Q+7TnU5wp3CZWJWHwpkcFbEcYIyWsQlSEE5Ti2N1509Lw==}
 
   vue-router@4.5.1:
     resolution: {integrity: sha512-ogAF3P97NPm8fJsE4by9dwSYtDwXIY1nFY9T6DyQnGHd1E2Da94w9JIolpe42LJGIl0DwOHBi8TcRPlPGwbTtw==}
@@ -6091,8 +6085,6 @@ snapshots:
   vue-demi@0.14.10(vue@3.5.16(typescript@5.8.3)):
     dependencies:
       vue: 3.5.16(typescript@5.8.3)
-
-  vue-router-prefetch@1.6.3: {}
 
   vue-router@4.5.1(vue@3.5.16(typescript@5.8.3)):
     dependencies:

@@ -1,7 +1,7 @@
 import { ViteSSG } from "vite-ssg";
 import { routes } from "vue-router/auto-routes";
 import App from "./App.vue";
-import RouterPrefetch from "vue-router-prefetch";
+import RouterPrefetch from "./lib/prefetch.ts";
 
 export const createApp = ViteSSG(
 	// the root component
