@@ -206,7 +206,7 @@ const onClickAvatar = () => {
     <hr class="my-3" />
 
     <aside class="overflow-auto py-3 leading-relaxed text-sm text-muted-foreground">
-      <img class="border-2 shadow w-full sm:w-[120px] sm:h-[160px] mr-12 md:float-left inline rounded-none"
+      <img class="border-2 shadow w-full sm:w-[120px] sm:h-[160px] sm:mr-12 md:float-left inline rounded-none"
         src="/img/aquarium.webp" alt="Kyoto Aquarium">
 
       <p>
