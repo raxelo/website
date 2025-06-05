@@ -32,7 +32,6 @@
 		"@unhead/vue": "^2.0.10",
 		"@vitejs/plugin-vue": "^5.2.3",
 		"@vue/tsconfig": "^0.7.0",
-		"beasties": "^0.3.4",
 		"shiki": "^3.5.0",
 		"typescript": "~5.8.3",
 		"unplugin-icons": "^22.1.0",
