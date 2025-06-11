@@ -8,6 +8,5 @@ export const createApp = ViteSSG(
 	// vue-router options
 	{ routes },
 	// function to have custom setups
-	({ app, router, routes, isClient, initialState }) => {
-	},
+	({ app, router, routes, isClient, initialState }) => {},
 );
