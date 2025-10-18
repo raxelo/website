@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { cn } from "./lib/utils";
+import GitHub from "~icons/mdi/github";
+import LinkedIn from "~icons/mdi/linkedin";
 
 const links = [
 	{
@@ -36,9 +38,19 @@ const { currentRoute } = useRouter();
   </main>
 
   <footer class="w-full max-w-3xl text-sm mx-auto px-2 pb-8 flex flex-wrap justify-between">
-    <span class="font-bold text-lg w-full">
-      lucas.goyeche.dev
-    </span>
+    <div class="w-full flex items-center justify-between mb-2">
+      <span class="font-bold text-lg">
+        lucas.goyeche.dev
+      </span>
+      <div class="flex items-center gap-3">
+        <a href="https://www.linkedin.com/in/lucasgoyeche/" target="_blank" rel="noopener noreferrer" class="text-muted-foreground/70 hover:text-foreground transition-colors" aria-label="LinkedIn">
+          <LinkedIn class="w-5 h-5" />
+        </a>
+        <a href="https://github.com/raxelo" target="_blank" rel="noopener noreferrer" class="text-muted-foreground/70 hover:text-foreground transition-colors" aria-label="GitHub">
+          <GitHub class="w-5 h-5" />
+        </a>
+      </div>
+    </div>
 
     <p class="w-full sm:w-auto text-muted-foreground/70">Built using <a target="_blank"
         href="https://vite.dev/">vite</a>

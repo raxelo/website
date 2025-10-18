@@ -3,6 +3,29 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  font-size: 16px;
+}
+
+/* Scale everything up on very large screens */
+@media (min-width: 1920px) {
+  html {
+    font-size: 18px; /* 112.5% – makes all tailwind spacing/fonts bigger */
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 20px; /* 125% – scales for 1440p/2K/4K screens */
+  }
+}
+
+@media (min-width: 3200px) {
+  html {
+    font-size: 22px;
+  }
+}
+
 :root {
 	--background: oklch(0.9821 0 0);
 	--foreground: oklch(0.2435 0 0);

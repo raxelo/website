@@ -13,6 +13,14 @@ import NetSuiteIcon from "~icons/cib/oracle-netsuite";
 import Vite from "~icons/logos/vitejs";
 import Grafana from "~icons/logos/grafana";
 import Tailwind from "~icons/devicon/tailwindcss";
+import Nuxt from "~icons/devicon/nuxtjs";
+import Express from "~icons/devicon/express";
+import MongoDB from "~icons/devicon/mongodb";
+import Redis from "~icons/devicon/redis";
+import Java from "~icons/logos/java";
+import Kotlin from "~icons/devicon/kotlin";
+import Linux from "~icons/devicon/linux";
+import Figma from "~icons/logos/figma";
 
 import TechnologyIcon from "@/components/ui/technology-icon/TechnologyIcon.vue";
 import {
@@ -22,6 +30,14 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface Project {
 	title: string;
@@ -73,7 +89,7 @@ const workExperiences: ReadonlyArray<WorkExperience> = [
 		id: "broken-rubik",
 		textColor: "text-purple-500",
 		company: "Broken Rubik",
-		companyUrl: "https://brokenrubik.co",
+		companyUrl: "https://www.brokenrubik.com",
 		role: "Team Leader & DevOps Architect",
 		period: "June 2021 - December 2024",
 		descriptionParagraphs: [
@@ -106,13 +122,13 @@ const workExperiences: ReadonlyArray<WorkExperience> = [
 			{
 				title:
 					"How to Monitor and Improve Deployment Performance in SuiteCommerce",
-				url: "https://www.brokenrubik.co/blog/how-to-monitor-and-improve-deployment-performance-in-suitecommerce",
+				url: "https://www.brokenrubik.com/blog/how-to-monitor-and-improve-deployment-performance-in-suitecommerce",
 				platform: "Broken Rubik Blog (Authored)",
 				date: "November 2024",
 			},
 			{
 				title: "Revolutionizing SuiteCommerce Deployment and Activation",
-				url: "https://www.brokenrubik.co/blog/revolutionizing-suitecommerce-deployment-and-activation",
+				url: "https://www.brokenrubik.com/blog/revolutionizing-suitecommerce-deployment-and-activation",
 				platform: "Broken Rubik Blog (Describes Catalyst project I developed)",
 				date: "November 2024",
 			},
@@ -151,6 +167,66 @@ const workExperiences: ReadonlyArray<WorkExperience> = [
 				type: "chrome extension",
 				thumbnail: "/img/projects/ns-search.png",
 				alt: "Thumbnail of the search extension",
+			},
+		],
+		blogPosts: [],
+	},
+	{
+		id: "koru-network",
+		textColor: "text-red-500",
+		company: "Koru Network",
+		role: "Self Employed",
+		period: "2019 - 2021",
+		descriptionParagraphs: [
+			"Koru Network was a Minecraft gaming community. Initially joined the team in its early stages as a web developer, to design and implement a website for the network. The website's prototypes were designed in Figma, which allowed for a quick feedback cycle.",
+			"The website featured a Nuxt.js (powered by Vue.js) front-end and an Express.js back-end, which involved MongoDB & Redis databases.",
+			"To fully finish and deploy the website, I had to venture into the Java world to connect the account systems with everything else. This was critical, as it also allowed me to play a significant role in the development of different game modes in the network, which were Java applications written for a microkernel architecture.",
+			"During this time, as the network grew in daily players, we managed to overcome multiple scalability issues and spam problems. To reduce spam, measurements regarding the authentication systems were deployed in both the website and the game.",
+			"In some game modes, the Java Reflection API was utilized; alongside in-game packets, to achieve highly specific features otherwise impossible.",
+			"Some of the website features worked in sync with the game, using Redis as an intermediary. Everything was self-hosted on Linux servers.",
+		],
+		keyTechnologies: [
+			{ key: "java", name: "Java", component: Java },
+			{ key: "kotlin", name: "Kotlin", component: Kotlin },
+			{ key: "linux", name: "Linux", component: Linux },
+			{ key: "nuxt", name: "Nuxt.js", component: Nuxt },
+			{ key: "vue", name: "Vue.js", component: Vue },
+			{ key: "express", name: "Express.js", component: Express },
+			{ key: "mongodb", name: "MongoDB", component: MongoDB },
+			{ key: "redis", name: "Redis", component: Redis },
+			{ key: "figma", name: "Figma", component: Figma },
+		],
+		projects: [
+			{
+				title: "600 Simultaneous Players",
+				url: "#",
+				description:
+					"We reached 600 simultaneous players, one of our biggest achievements.",
+				thumbnail: "/img/projects/koru/600-players.jpg",
+				alt: "We reached 600 simultaneous players, one of our biggest achievements.",
+			},
+			{
+				title: "Website Prototype",
+				url: "#",
+				description:
+					"An unreleased prototype for the next version of the website.",
+				thumbnail: "/img/projects/koru/website-prototype.jpg",
+				alt: "An unreleased prototype for the next version of the website.",
+			},
+			{
+				title: "Staff Panel",
+				url: "#",
+				description:
+					"This web application allowed staff members to manage user's punishments, tickets, and other useful information.",
+				thumbnail: "/img/projects/koru/staff-panel.jpg",
+				alt: "This web application allowed staff members to manage user's punishments, tickets, and other useful information.",
+			},
+			{
+				title: "Practice Leaderboards",
+				url: "#",
+				description: "Practice leaderboards on the website.",
+				thumbnail: "/img/projects/koru/practice-leaderboards.jpg",
+				alt: "Practice leaderboards on the website.",
 			},
 		],
 		blogPosts: [],
@@ -205,15 +281,53 @@ const workExperiences: ReadonlyArray<WorkExperience> = [
             <li v-for="project in exp.projects" :key="project.title"
               class="text-muted-foreground flex gap-1 sm:gap-3 flex-wrap sm:flex-nowrap">
 
-              <img v-if="project.thumbnail" :src="project.thumbnail" :alt="project.alt || project.title"
+              <!-- Projects with url="#" open in a modal -->
+              <template v-if="project.url === '#' && project.thumbnail">
+                <Dialog>
+                  <DialogTrigger as-child>
+                    <img :src="project.thumbnail" :alt="project.alt || project.title"
+                      class="block w-full sm:w-64 h-50 sm:h-40 shrink-0 border-2 object-cover cursor-pointer hover:opacity-90 transition-opacity" loading="lazy" />
+                  </DialogTrigger>
+                  <DialogContent class="max-w-4xl">
+                    <DialogHeader>
+                      <DialogTitle>{{ project.title }}</DialogTitle>
+                      <DialogDescription v-if="project.description">{{ project.description }}</DialogDescription>
+                    </DialogHeader>
+                    <img :src="project.thumbnail" :alt="project.alt || project.title"
+                      class="w-full h-auto border-2" />
+                  </DialogContent>
+                </Dialog>
+              </template>
+              <img v-else-if="project.thumbnail" :src="project.thumbnail" :alt="project.alt || project.title"
                 class="block w-full sm:w-64 h-50 sm:h-40 shrink-0 border-2 object-cover" loading="lazy" />
 
               <div>
-                <component :is="project.url.startsWith('/') ? 'router-link' : 'a'"
-                  :target="project.url.startsWith('/') ? '' : '_blank'" :href="project.url" :to="project.url"
-                  rel="noopener noreferrer" class="font-medium text-blue-500 hover:text-blue-400 hover:underline">
-                  {{ project.title }}
-                </component>
+                <!-- Projects with url="#" open in a modal -->
+                <template v-if="project.url === '#'">
+                  <Dialog>
+                    <DialogTrigger as-child>
+                      <button class="font-medium text-blue-500 hover:text-blue-400 hover:underline cursor-pointer text-left">
+                        {{ project.title }}
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent class="max-w-4xl">
+                      <DialogHeader>
+                        <DialogTitle>{{ project.title }}</DialogTitle>
+                        <DialogDescription v-if="project.description">{{ project.description }}</DialogDescription>
+                      </DialogHeader>
+                      <img v-if="project.thumbnail" :src="project.thumbnail" :alt="project.alt || project.title"
+                        class="w-full h-auto border-2" />
+                    </DialogContent>
+                  </Dialog>
+                </template>
+                <!-- Projects with real URLs are links -->
+                <template v-else>
+                  <component :is="project.url.startsWith('/') ? 'router-link' : 'a'"
+                    :target="project.url.startsWith('/') ? '' : '_blank'" :href="project.url" :to="project.url"
+                    rel="noopener noreferrer" class="font-medium text-blue-500 hover:text-blue-400 hover:underline">
+                    {{ project.title }}
+                  </component>
+                </template>
 
                 <span v-if="project.type" class="text-xs italic">
                   ({{ project.type }})
