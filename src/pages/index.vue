@@ -23,7 +23,11 @@ import DigitalOcean from "~icons/devicon/digitalocean";
 import NetSuite from "~icons/cib/oracle-netsuite";
 
 import TechnologyIcon from "@/components/ui/technology-icon/TechnologyIcon.vue";
+import OnlineIndicator from "@/components/ui/online-indicator/OnlineIndicator.vue";
 import { computed, ref } from "vue";
+import { useCopyEmail } from "@/composables/useCopyEmail";
+
+const { copyEmail } = useCopyEmail();
 
 const technologyIcons = [
 	{
@@ -160,11 +164,16 @@ const onClickAvatar = () => {
       <NotoRaccoon /> Lucas Goyeche
     </h1>
     <div class="mb-4">
-      <button
-        class="transition-all cursor-pointer hover:saturate-125 active:transform active:translate-1 active:shadow-sm overflow-hidden mb-4 mx-auto block sm:mb-0 bg-white sm:ml-2 sm:-mt-12 w-32 h-32 sm:float-right sm:inline rounded-full border-2 border-black shadow"
-        @click="onClickAvatar">
-        <img :src="selectedAvatar.src" :alt="selectedAvatar.alt" />
-      </button>
+      <div class="mb-4 mx-auto sm:mb-0 sm:ml-2 sm:-mt-12 sm:float-right flex flex-col items-center gap-1">
+        <button
+          class="transition-all cursor-pointer hover:saturate-125 active:transform active:translate-1 active:shadow-sm overflow-hidden bg-white w-32 h-32 rounded-full border-2 border-black shadow"
+          @click="onClickAvatar">
+          <img :src="selectedAvatar.src" :alt="selectedAvatar.alt" />
+        </button>
+        <button class="decoration-transparent hover:bg-gray-200 py-1 px-2 mt-2 hover:cursor-pointer active:cursor-grab active:bg-gray-900 active:text-gray-100!" type="button" @click="copyEmail">
+          <OnlineIndicator />
+        </button>
+      </div>
       <p>
         Thank you for visiting my website! I'm a software dev based in
         <a target="_blank" href="https://www.google.com/maps/place/Maldonado,+Maldonado+Department/">Maldonado,

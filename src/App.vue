@@ -3,6 +3,8 @@ import { useRouter } from "vue-router";
 import { cn } from "./lib/utils";
 import GitHub from "~icons/mdi/github";
 import LinkedIn from "~icons/mdi/linkedin";
+import { Toaster } from "@/components/ui/sonner";
+import "vue-sonner/style.css";
 
 const links = [
 	{
@@ -58,4 +60,6 @@ const { currentRoute } = useRouter();
 
     <p class="text-muted-foreground/70">&copy; 2025-present Lucas Goyeche.</p>
   </footer>
+
+  <Toaster />
 </template>

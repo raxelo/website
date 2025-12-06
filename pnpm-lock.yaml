@@ -41,6 +41,9 @@ importers:
       vue:
         specifier: ^3.5.13
         version: 3.5.16(typescript@5.8.3)
+      vue-sonner:
+        specifier: ^2.0.9
+        version: 2.0.9
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -54,9 +57,15 @@ importers:
       '@iconify-json/line-md':
         specifier: ^1.2.8
         version: 1.2.8
+      '@iconify-json/logos':
+        specifier: ^1.2.9
+        version: 1.2.9
       '@iconify-json/lucide':
         specifier: ^1.2.46
         version: 1.2.46
+      '@iconify-json/mdi':
+        specifier: ^1.2.3
+        version: 1.2.3
       '@iconify-json/noto':
         specifier: ^1.2.3
         version: 1.2.3
@@ -560,8 +569,14 @@ packages:
   '@iconify-json/line-md@1.2.8':
     resolution: {integrity: sha512-jWFsu6OZ1xAd4U0MLc/dgawC8nCbSn+a+WjTv+luiihpb6rrGLMw+Vy3wQ01hGf77v+fwt8sTvwm6K9zN3r4vQ==}
 
+  '@iconify-json/logos@1.2.9':
+    resolution: {integrity: sha512-G6VCdFnwZcrT6Eveq3m43oJfLw/CX8plwFcE+2jgv3fiGB64pTmnU7Yd1MNZ/eA+/Re2iEDhuCfSNOWTHwwK8w==}
+
   '@iconify-json/lucide@1.2.46':
     resolution: {integrity: sha512-Px1SV3D//DLAJGUKToAIYufLTbF1Ba7DU8AGOMpYpLRBChBvYeytXpZWYEYV0A/5UCrx7loB3F3TJl0kRlb0Og==}
+
+  '@iconify-json/mdi@1.2.3':
+    resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
 
   '@iconify-json/noto@1.2.3':
     resolution: {integrity: sha512-YvsF8je31tPUAkhXw+aydVlmF5LOTNGRE5foOdsZVuniymr4r4020JUN9Kc/i2eOqmHDodBKmX62Um4+o8c6UQ==}
@@ -2978,6 +2993,20 @@ packages:
     peerDependencies:
       vue: ^3.2.0
 
+  vue-sonner@2.0.9:
+    resolution: {integrity: sha512-i6BokNlNDL93fpzNxN/LZSn6D6MzlO+i3qXt6iVZne3x1k7R46d5HlFB4P8tYydhgqOrRbIZEsnRd3kG7qGXyw==}
+    peerDependencies:
+      '@nuxt/kit': ^4.0.3
+      '@nuxt/schema': ^4.0.3
+      nuxt: ^4.0.3
+    peerDependenciesMeta:
+      '@nuxt/kit':
+        optional: true
+      '@nuxt/schema':
+        optional: true
+      nuxt:
+        optional: true
+
   vue-tsc@2.2.10:
     resolution: {integrity: sha512-jWZ1xSaNbabEV3whpIDMbjVSVawjAyW+x1n3JeGQo7S0uv2n9F/JMgWW90tGWNFRKya4YwKMZgCtr0vRAM7DeQ==}
     hasBin: true
@@ -3412,7 +3441,15 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
+  '@iconify-json/logos@1.2.9':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/lucide@1.2.46':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/mdi@1.2.3':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -5996,6 +6033,8 @@ snapshots:
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.16(typescript@5.8.3)
+
+  vue-sonner@2.0.9: {}
 
   vue-tsc@2.2.10(typescript@5.8.3):
     dependencies:
