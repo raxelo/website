@@ -21,6 +21,7 @@ declare module 'vue-router/auto-routes' {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/blog/': RouteRecordInfo<'/blog/', '/blog', Record<never, never>, Record<never, never>>,
     '/blog/(posts)/i-dont-know-how-to-type/': RouteRecordInfo<'/blog/(posts)/i-dont-know-how-to-type/', '/blog/i-dont-know-how-to-type', Record<never, never>, Record<never, never>>,
+    '/blog/(posts)/i-learned-to-type-again/': RouteRecordInfo<'/blog/(posts)/i-learned-to-type-again/', '/blog/i-learned-to-type-again', Record<never, never>, Record<never, never>>,
     '/blog/(posts)/my-email-setup/': RouteRecordInfo<'/blog/(posts)/my-email-setup/', '/blog/my-email-setup', Record<never, never>, Record<never, never>>,
     '/blog/(posts)/tools-i-use-part-0/': RouteRecordInfo<'/blog/(posts)/tools-i-use-part-0/', '/blog/tools-i-use-part-0', Record<never, never>, Record<never, never>>,
     '/blog/(posts)/tools-i-use-part-0/components/gist-ghq-project-switch': RouteRecordInfo<'/blog/(posts)/tools-i-use-part-0/components/gist-ghq-project-switch', '/blog/tools-i-use-part-0/components/gist-ghq-project-switch', Record<never, never>, Record<never, never>>,
