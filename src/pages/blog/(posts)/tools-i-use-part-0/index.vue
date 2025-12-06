@@ -361,7 +361,6 @@ const workspaces = ref([
       <div
         class="not-prose my-8 p-6 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20 rounded-lg border">
         <div class="text-center">
-          <h4 class="text-lg font-bold mb-2">🔮 Want more setup deep-dives?</h4>
           <p class="text-sm text-muted-foreground mb-4">
             Next up: My IDE setup, custom shortcuts, and the dotfiles that make it all work together.
           </p>
